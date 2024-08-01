@@ -1,1 +1,1 @@
-data azurerm_client_config "config" {}
+data azurerm_client_config "current" {}
