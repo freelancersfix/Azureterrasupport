@@ -14,11 +14,11 @@ resource "azurerm_key_vault" "azkeyvault" {
 
    access_policy  {
    tenent_id = data.azurerm_client_config.current.tenent_id
-   object_id = data.azurerm_client_config.current.oject_id
+   object_id = data.azurerm_client_config.current.object_id
 
-   key_permissions = [ Get, Update, ]
-   secret_permissions = [ Get, Update, ]
-   storage_permissions = [ Get, Delete, ]
+   key_permissions = [ "Get", "Update", ]
+   secret_permissions = [ "Get", "Update", ]
+   storage_permissions = [ "Get", "Delete", ]
 
    }
 }
