@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "rgname" {
-   name = "var.RGname"
+   name = "var.rg_name"
    location = "southcentralus"
    }
