@@ -11,5 +11,15 @@ resource "azurerm_key_vault" "azkeyvault" {
    sku_name = "standard"
    soft_delete_retention_days = 7
    purge_protection_enabled = false
+
+   access_policy  {
+   tenent_id = data.azurerm_client_config.current.tenent_id
+   object_id = data.azurerm_client_config.current.oject_id
+
+   key_permissions = [ Get, Update, ]
+   secret_permissions = [ Get, Update, ]
+   storage_permissions = [ Get, Delete, ]
+
+   }
 }
 
