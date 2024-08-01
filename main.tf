@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "rg_name" {
    location = "southcentralus"
    }
 
-resource "azurerm_keyvault" "azkeyvault" {
+resource "azurerm_key_vault" "azkeyvault" {
    name = "sc-kv-dev-01"
    location = azurerm_resource_group.rg_name.location
    tenant_id = azurerm_client_config_current.tenant_id
