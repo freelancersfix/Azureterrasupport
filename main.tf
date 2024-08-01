@@ -9,11 +9,7 @@ terraform {
       source = "hashicorp/azuread"
       version = "2.15.0"
     }
-    azapi = {
-     source = "hashicorp/azapi"
-     version = "1.15.0"
    }
-}
 }
 
 
