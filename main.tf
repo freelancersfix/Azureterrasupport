@@ -1,24 +1,4 @@
-#main.tf
-terraform {
-  required_providers {
-     azurerm = {
-       source = "hashicorp/azurerm"
-       version = "3.113.0"
-    }
-    azuread = {
-      source = "hashicorp/azuread"
-      version = "2.15.0"
-    }
+resource "azurerm_resource_group" "rgname" {
+   name = "var.RGname"
+   location = "southcentralus"
    }
-}
-
-
-provider "azurerm" {
-   features {}
-}
-
-provider "azuread" {
-}
-
-
-
